@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'edkolev/tmuxline.vim'
 Plug 'edkolev/promptline.vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'crusoexia/vim-monokai'
 call plug#end()
 
 "Mappings
