@@ -1,15 +1,11 @@
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
-
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/nicolaifsf/.oh-my-zsh
+export ZSH=/Users/Nicolai/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="af-magic"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -52,11 +48,11 @@ ZSH_THEME="af-magic"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git copydir osx)
 
 # User configuration
 
-export PATH="/Users/nicolaifsf/.rvm/gems/ruby-2.3.0/bin:/Users/nicolaifsf/.rvm/gems/ruby-2.3.0@global/bin:/Users/nicolaifsf/.rvm/rubies/ruby-2.3.0/bin:/sbin:/Users/Nicolai/.vimpkg/bin:/usr/local/bin:/usr/local/go/bin:/Users/Nicolai/gcc-cross/toolchain/bin:/opt/local/bin:/Users/Nicolai/Documents/goCode/bin:/Users/nicolaifsf/Scripts:/Users/nicolaifsf/Documents/Learn/ShellScripts:/usr/local/go/bin:/Users/Nicolai/ThirdPartyApplications:/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin:~/.nimble/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/nicolaifsf/.rvm/bin"
+export PATH="/usr/local/go/bin:/Users/Nicolai/ThirdPartyApplications:/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin:~/.nimble/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -84,48 +80,52 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-export PATH="$PATH:/usr/local/go/bin"
-export GOPATH=~/Documents/Projects/goCode/
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:/Users/nicolaifsf/.chefdk/gem/ruby/2.1.0/bin"
-export PATH="$PATH:~/Scripts"
-export PATH="$PATH:/Users/nicolaifsf/.gem/ruby/2.3.0/bin"
-export PATH="Users/nicolaifsf/Documents/Projects/goCode/bin:$PATH"
-export PATH="/Users/nicolaifsf/Documents/Projects/goCode/bin:$PATH"
-export GOBIN=~/Documents/Projects/goCode/bin
-export EDITOR='vim'
-# eval "$(chef shell-init zsh)"
-export GOOGLEIT_API_KEY=AIzaSyBe98sovvQx19JrV8xYpRA6ieTVQh3aogU
-export GOOGLEIT_ENGINE_ID=013192562340963167494:9p-umton5ak
-# User specific aliases and functions
+# alias ohmyzsh="mate ~/.oh-my-zsh"export PATH=~/gcc-cross/toolchain/bin:{/Users/Nicolai/gcc-cross/toolchain/bin:/usr/local/go/bin:/Users/Nicolai/ThirdPartyApplications:/Applications/Julia-0.3.11.app/Contents/Resources/julia/bin:~/.nimble/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin}
 #
-# export rvm_path=/home/fsj/.rvm
 
- # ruby  fsj-add
- export ruby=/home/fsj/.rvm/gems/ruby-1.9.3-p551/bin:/home/fsj/.rvm/gems/ruby-1.9.3-p551@global/bin:/home/fsj/.rvm/rubies/ruby-1.9.3-p551/bin
-#  export PATH="$ruby:$PATH"# add ruby to PATH
+alias vimgo='vim -u ~/.vimrc.go'
+export PATH=~/Documents/Learn/ShellScripts:$PATH
+export GOPATH=/Users/Nicolai/Documents/goCode
+#export PATH=/sbin:{$PATH}
+export PATH=~/Scripts:$PATH
+export PATH=/Users/Nicolai/Documents/goCode/bin:$PATH
+export PATH=/opt/local/bin:$PATH
+# export PATH=/Users/Nicolai/gcc-cross/toolchain/bin:$PATH
+export PATH=/usr/local/go/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH=/Users/Nicolai/.vimpkg/bin:$PATH
+export PATH=/sbin:$PATH
 
- export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
- export PATH="$PATH:~/Documents/Projects/goCode/bin/"
-
- export PATH="$PATH:/Applications/Racket\ v6.6/bin"
-
- export GEM_HOME=$HOME/.gem
- export GEM_PATH=$HOME/.gem
-# This below gets docker env working
- eval "$(docker-machine env default)"
- export BING_KEY="bee97ddc4a604517bb5cf900e0960f27"
- alias li "vi '+set ic lisp ai wm=0 |map # Ji^M^[ |1' \!*""]'"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-. /Users/nicolaifsf/Scripts/z.sh
-
-
-
-
-export NVM_DIR="/Users/nicolaifsf/.nvm"
+. ~/Documents/Learn/ShellScripts/home.sh
+export NVM_DIR="/Users/Nicolai/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export EDITOR='vim'
+source ~/.bin/tmuxinator.zsh
+alias vim='/usr/local/Cellar/vim/7.4.1830/bin/vim'
+# alias scheme="rlwrap -r -c -f /Users/path/to/mit_scheme_bindings.txt scheme"
+alias scheme="rlwrap scheme"
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export PATH=~/Bin:$PATH
+export PATH=/usr/local/texlive/2016/bin/x86_64-darwin:$PATH
+export PATH=~/.bin:$PATH
+# export PATH=~/anaconda3/bin:$PATH
+export PATH=~/anaconda/bin:$PATH
+# alias py='/usr/bin/python2.7'
+# export PATH="/usr/local/Cellar/emacs-plus/24.5/bin/emacs":$PATH
+alias gohome='cd $GOPATH'
+
+#mysql
+export PATH=$PATH:/Applications/MySQLWorkbench.app/Contents/MacOS
+alias weather='curl wttr.in/newyork'
+
+# PROTOBUF
+# export PATH=$PATH:/Users/Nicolai/Documents/Installs/php-protobuf
+
+
+# Java_home
+export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
+
+# MAVEN
+export PATH=~/apache-maven-3.5.0/bin:$PATH
